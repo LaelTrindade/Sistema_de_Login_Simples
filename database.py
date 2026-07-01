@@ -79,4 +79,4 @@ def gerar_login(nome_completo):
         return nomes[0].lower()
     primeiro = nomes[0].lower()
     ultimo = nomes[-1].lower()
-    return f"{primeiro}.{ultimo}" #
+    return f"{primeiro}.{ultimo}"
