@@ -8,7 +8,7 @@ FILE = os.path.join(BASE_DIR, 'assets', 'database', 'data.json')
 
 popup = None
 
-def mostrar_popup(title, message, master = None):
+def mostrar_popup(title, message, master):
 
     global popup
 

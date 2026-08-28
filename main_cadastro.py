@@ -168,10 +168,13 @@ def cadastro_screen():
 
         checkbox_1.place(x = 5, y = 267)
 
-        def finalizar_cadastro(): #
+        def finalizar_cadastro(): 
             if not checkbox_var.get():
+
                 database.mostrar_popup('Erro',
-                'Você deve aceitar os Termos e Condições de uso.')
+                'Você deve aceitar os Termos e Condições de uso.', master = cadastro_app)
+
+                return
 
             data_users = {
             "nome": entry_1.get(),
@@ -183,7 +186,8 @@ def cadastro_screen():
             confirmar = entry_5.get()
 
             if(data_users["senha"] != confirmar):
-                database.mostrar_popup('Erro', "Senha não confere.")
+                
+                database.mostrar_popup('Erro', "Senha não confere.", master = cadastro_app)
                 return
             
             data_users["login"] = database.gerar_login(data_users["nome"])

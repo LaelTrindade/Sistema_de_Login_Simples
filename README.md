@@ -13,6 +13,11 @@ Sistema desktop de login e cadastro de usuários, desenvolvido em Python com Cus
 - **Persistência de dados em JSON**, sem necessidade de banco de dados externo
 - **Tema escuro** por padrão, com interface construída em CustomTkinter
 
+## ⚠️ Limitações conhecidas
+
+- O checkbox **"Lembrar de mim"** na tela de login está presente na interface, mas não possui funcionalidade implementada
+- O cadastro **não valida campos em branco** (nome, telefone, email e senha) — apenas o aceite dos Termos e Condições e a confirmação de senha são validados
+
 ## 🛠️ Tecnologias
 
 - **Python 3.12**
@@ -30,7 +35,7 @@ Sistema de Login [Moderno]/
 ├── assets/
 │   ├── images/                # Ícone e imagens da interface
 │   └── database/
-│       └── data.json           # Armazenamento dos usuários (ignorado no Git)
+│       └── data.json           # Armazenamento dos usuários (versionado, vazio)
 └── README.md
 ```
 
@@ -58,15 +63,8 @@ pip install customtkinter pillow
 python main.py
 ```
 
-> Na primeira execução, o arquivo `assets/database/data.json` é criado automaticamente ao cadastrar o primeiro usuário.
+> O arquivo `assets/database/data.json` já vem versionado no repositório, vazio (`{"users": []}`), pronto para uso na primeira execução.
 
 ## 📌 Sobre o projeto
 
 Este projeto foi desenvolvido como exercício prático de **interfaces gráficas em Python**, explorando posicionamento de widgets com `place()`, customização visual com Canvas (contorno de texto), manipulação de imagens com Pillow e persistência simples de dados sem depender de um banco de dados relacional.
-
-## 🚧 Possíveis melhorias futuras
-
-- Criptografar as senhas antes de salvar no JSON (atualmente armazenadas em texto puro)
-- Migrar a persistência para um banco de dados real (SQLite)
-- Validação de formato de email e telefone nos campos de cadastro
-- Recuperação de senha

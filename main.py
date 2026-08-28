@@ -43,7 +43,7 @@ label_1 = ctk.CTkLabel(frame_1,
 label_1.place(relx = 0.5, y = 50, anchor = 'center')
 
 label_2 = ctk.CTkLabel(frame_1,
-    text = 'Para utilizar nossos serviços, \ninforme suas informações de login!',
+    text = 'Para utilizar nossos serviços, \ninsira suas informações de login!',
     font = ('arial', 10, 'italic'))
 
 label_2.place(relx = 0.5, y = 80, anchor = 'center')
