@@ -1,4 +1,4 @@
-# Sistema de Login [Moderno]
+# Sistema de Login [Simples]
 
 Sistema desktop de login e cadastro de usuários, desenvolvido em Python com CustomTkinter. Interface moderna com tela de login e tela de registro, validação de dados e persistência em JSON.
 
